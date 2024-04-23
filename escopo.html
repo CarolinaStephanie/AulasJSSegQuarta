@@ -1,0 +1,137 @@
+<hmtl>
+  <script>
+    // Primeiro exemplo para pensar
+
+    // var nome = "Lucas";
+
+    // function sobrescreveNome() {
+    //   var nome = "Jonas";
+    // }
+
+    // function sobrescreveNomeDenovo() {
+    //   nome = "Maria";
+    // }
+
+    // // nome = "Lucas";
+    // sobrescreveNome();
+    // // nome = "Lucas";
+    // sobrescreveNomeDenovo();
+    // // nome = "Maria";
+    // console.log(nome);
+
+    // --------------------------------
+    // var idade = 36; // Escopo Global
+    // function externa() {
+    //   var mensagem = "Olá"; // Escopo função
+
+    //   function interna() {
+    //     console.log(mensagem);
+    //   }
+    //   interna();
+    // }
+    // // GLOBAL
+    // interna();
+    // --------------------------------
+
+    // var nome = "Maria";
+    // if (nome == "Maria") { // escopo de bloco;
+    //   var eMaria = true;
+    // }
+    // console.log(eMaria);
+
+    //----------------------------------
+
+    // console.log(somar);
+
+    // function somar(primeiroNumero, segundoNumero) {
+    //   var resultado = primeiroNumero + segundoNumero;
+    // }
+
+    // console.log(somar(1, 2));
+
+    // function somar(primeiroNumero, segundoNumero) {
+    //   var resultado = primeiroNumero + segundoNumero;
+    // }
+
+    // ------------------------------------
+
+    // somar(1, 2);
+    // console.log(numero);
+
+    // function somar(primeiroNumero, segundoNumero) {
+    //   console.log(resultado);
+    //   var resultado = primeiroNumero + segundoNumero;
+
+    //   console.log(resultado);
+    //   // codigos + atribuicoes
+    // }
+
+    // var numero = 1;
+
+    // ------------------------------------
+
+    // var desconto;
+    // function calculaDesconto(preco) {
+    //   var desconto = preco * 0.3;
+    // }
+    // calculaDesconto(50);
+    // console.log("desconto de 30% = R$" + desconto);
+
+    // ----------------------------
+
+    // var nome = "Maria";
+    // if (nome == "Maria") {
+    //   // escopo de bloco;
+    //   let eMaria = true;
+    // }
+    // console.log(eMaria);
+
+    // ---------------------------
+
+    //Exemplo 1 - Não eleva (hoist)
+    // var x = 1;
+    // console.log(x + " " + y); // '1 undefined'
+    // var y = 2;
+
+    // var x;
+    // var y;
+    // x = 1;
+    // console.log(x + " " + y);
+    // y = 2;
+
+    // //Isso não funcionará, pois o JavaScript apenas eleva declarações
+
+    // //Example 2 - Hoists
+    // var num1 = 3;
+    // num2 = 4;
+    // console.log(num1 + " " + num2); //'3 4'
+    // var num2; //Declara num2 para hoisting
+
+    // var num1;
+    // var num2;
+    // num1 = 3;
+    // num2 = 4;
+    // console.log(num1 + " " + num2); //'3 4'
+
+    // //Example 3 - Hoists
+    // a = "Cran";
+    // b = "berry";
+    // console.log(a + "" + b); // 'Cranberry'
+    // var a, b; //Declara ambos a & b para hoisting
+    // const valor = undefined;
+
+    // var a;
+    // var b;
+    // a = "Cran";
+    // b = "berry";
+    // console.log(a + "" + b);
+
+    //------------
+    let fruta = "morango";
+    function sobreescreve() {
+      console.log(fruta);
+    }
+
+    sobreescreve();
+  </script>
+</hmtl>

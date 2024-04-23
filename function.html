@@ -1,0 +1,38 @@
+<hmtl>
+  <script>
+    // RESOLVER UM PROCESSO COMPLEXO
+    // Cálculo de ICMS:
+    var somar = (a, b) => a + b;
+    var subtrair = (a, b) => a + b;
+    var calculoICMS = (x) => x * 0.21;
+
+    var precoProduto = 500;
+    const desconto = 50;
+
+    // Calculo = preco + ICMS - desconto
+    var icms = calculoICMS(precoProduto);
+    var soma = somar(precoProduto, icms);
+    var novoPreco = subtrair(soma, desconto);
+    console.log(novoPreco);
+    // -------------------------------------------
+
+    // Determinar se dois números são múltiplos:
+    var lerNumero = () => parseInt(prompt("Digite um numero"));
+    var verificarMultiplos = (n1, n2) => {
+      if (n1 % n2 === 0 || n2 % n1 === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    var num1 = lerNumero();
+    var num2 = lerNumero();
+    var saoMultiplos = verificarMultiplos(num1, num2);
+    if (saoMultiplos) {
+      console.log("Os números são múltiplos");
+    } else {
+      console.log("Os números não são múltiplos");
+    }
+  </script>
+</hmtl>

@@ -1,11 +1,23 @@
 <html>
   <script>
-    var valor = 5;
-    if (valor) {
-      console.log("verdadeiro");
-    } else {
-      console.log("falso");
-    }
-    console.log(valor);
+    var soma = (num1, num2) => num1 + num2;
+    var subtracao = (num1, num2) => num1 - num2;
+    var multiplicacao = (num1, num2) => num1 * num2;
+    var divisao = (num1, num2) => num1 / num2;
+
+    var calculadora = (primeiroNumero, segundoNumero, operacao) => {
+      if (operacao == "+") {
+        return soma(primeiroNumero, segundoNumero);
+      } else if (operacao == "-") {
+        return subtracao(primeiroNumero, segundoNumero);
+      } else if (operacao == "*") {
+        return multiplicacao(primeiroNumero, segundoNumero);
+      } else if (operacao == "/") {
+        return divisao(primeiroNumero, segundoNumero);
+      } else {
+        return 0;
+      }
+    };
+    console.log(calculadora(10, 5, "*"));
   </script>
 </html>
