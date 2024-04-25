@@ -1,0 +1,182 @@
+<hmtl>
+  <script>
+    // i++
+    // i+=1
+
+    // for (let i = 0; i <= 10; i++) {
+    //   console.log(i);
+    // }
+
+    // for (let i = 10; i >= 0; i -= 1) {
+    //   console.log(i);
+    // }
+
+    // -----------------------------------
+
+    // let tabuada = (numero) => {
+    //   // numero = 5
+    //   for (let i = 1; i <= 9; i++) {
+    //     // 1 = 1, 2
+    //     let multiplicacao = numero * i; // 5
+    //     console.log(numero + " * " + i + " = " + multiplicacao);
+    //   }
+    // };
+    // tabuada(5);
+    // -----------------------------------
+
+    // let numero = 5; // 1 * 2 * 3 * 4 * 5
+
+    // function produtorio(numero) {
+    //   // numero: 5
+    //   let resultado = 1;
+    //   for (let i = 1; i <= numero; i++) {
+    //     //i: 1, 2, 3, 4
+    //     resultado = resultado * i; // 1 iteracao resultado = 1, 2 iteracao resultado = 1 * 2 = 2, 3 i: 2*3 = 6;
+    //   }
+    //   console.log("Produtório de " + numero + " = " + resultado);
+    // }
+
+    // produtorio(numero);
+
+    // -----------------------------------
+
+    // for (let i = 1; i <= 5; i++) {
+    //   // i: 1, 2, 3
+    //   if (i == 3) {
+    //     break;
+    //   }
+    //   console.log(i); // 1, 2
+    // }
+    // console.log("acabou o codigo");
+
+    // Qual o primeiro numero multiplo de 5 em um intervalo de 51-60 : 55
+
+    // for (let i = 51; i <= 60; i++) {
+    //   // i: 51, 52, 53, 54, 55
+    //   // 55 % 5 = 0           10 resto 1
+
+    //   // numero é par i % 2 == 0
+
+    //   if (i % 5 === 0) {
+    //     console.log("O primeiro numero multiplo do 5 é: " + i);
+    //     break;
+    //   }
+    // }
+
+    // for (let i = 1; i <= 5; i++) {
+    //   console.log(i); // 1, 2 , 3, 4, 5
+
+    //   if (i == 3) {
+    //     continue; // Abaixo do continue;
+    //   }
+
+    //   console.log(i); // 1, 2, 4, 5
+    // }
+
+    // Imprimir todos os numeros de 1 a 10 que são impares;
+
+    // for (let i = 1; i <= 10; i++) {
+    //   if (i % 2 == 0) {
+    //     // condicao para saber se um numero é par
+    //     continue;
+    //   }
+    //   console.log(i); // 1, 3, 5, 7, ....
+    // }
+
+    // console.log("acabou o meu codigo");
+
+    // function menorQue(numero) {
+    //     // numero = 5
+    //   for (let i = 1; i <= 10; i++) {
+    //     // i: 1,2,3, 4
+    //     if (i == numero) {
+    //       break;
+    //     }
+    //     console.log(i); // 1, 2, 3, 4
+    //   }
+    // }
+    // menorQue(5);
+
+    // --------------------------------
+
+    // let entrada = prompt("Inserir um Dado");
+
+    // while (entrada != "sair") {
+    //   console.log("O usuario inseriu " + entrada);
+    //   entrada = prompt("Inserir um Dado");
+    // }
+
+    // let i = 1;
+    // while (i <= 10) {
+    //   console.log(i);
+    //   i++;
+    // }
+
+    // function fatorial(numero) {
+    //   let resultado = 1;
+    //   // resultado: 1
+    //   while (numero > 1) {
+    //     resultado *= numero;
+    //     //resultado = numero * resultado; // 5 * 1 * 4 * 3 * 2
+    //     numero--;
+    //   }
+    //   return resultado;
+    // }
+
+    // console.log(fatorial(5));
+
+    // let entrada = prompt("Inserir um Dado");
+
+    // while (entrada != "sair") {
+    //   console.log("O usuario inseriu " + entrada);
+    //   entrada = prompt("Inserir um Dado");
+    // }
+    // let entrada = "";
+    // do {
+    //   entrada = prompt("Inserir um Dado"); // carol, sair
+    //   console.log(entrada);
+    // } while (entrada != "sair");
+
+    // let diaSemana = "Sexta";
+
+    // if (diaSemana === "Sábado" || diaSemana === "Domingo") {
+    //   console.log("Ótimo! É fim de semana.");
+    // } else if (diaSemana === "Sexta") {
+    //   console.log("Hoje é sexta-feira, quase lá!");
+    // } else {
+    //   console.log("Dia útil...");
+    // }
+
+    // switch (diaSemana) {
+    //   case "Domingo":
+    //   case "Sábado":
+    //     console.log("Ótimo! É fim de semana.");
+    //     break;
+    //   case "Sexta":
+    //     console.log("Hoje é sexta-feira, quase lá!");
+    //     break;
+    //   default:
+    //     console.log("Dia útil...");
+    // }
+
+    // let idade = 18;
+
+    // if (idade >= 18) {
+    //   console.log("Pode dirigir, é maior de idade.");
+    // } else {
+    //   console.log("Não pode dirigir, é menor de idade.");
+    // }
+
+    function calcIdade(idade) {
+      switch (idade) {
+        case idade > 18:
+          console.log("Pode dirigir, é maior de idade.");
+        default:
+          console.log("Não pode dirigir, é menor de idade.");
+      }
+    }
+    calcIdade(70);
+
+    // fim do meu programa
+  </script>
+</hmtl>
