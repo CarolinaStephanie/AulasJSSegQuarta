@@ -1,0 +1,172 @@
+<hmtl>
+  <script>
+    // // Exercício 1 - Par ou impar
+
+    // function parOuImpar(num) {
+    //   // if(typeof num != 'number')
+    //   if (isNaN(num)) {
+    //     console("Digite um número válido");
+    //   } else {
+    //     console.log(num % 2 === 0 ? "É par" : "É impar");
+    //     // if (num % 2 === 0) {
+    //     //   console.log("É par");
+    //     // } else {
+    //     //   console.log("É impar");
+    //     // }
+    //   }
+    // }
+
+    // Exercicio 2 - Encontrar estação do ano
+
+    // function encontrarEstacao(mes) {
+    //   switch (mes) {
+    //     case 1:
+    //     case 2:
+    //     case 3:
+    //       console.log("Verão");
+    //       break;
+    //     case 4:
+    //     case 5:
+    //     case 6:
+    //       console.log("Outono");
+    //       break;
+    //     case 7:
+    //     case 8:
+    //     case 9:
+    //       console.log("Inverno");
+    //       break;
+    //     case 10:
+    //     case 11:
+    //     case 12:
+    //       console.log("Primaveira");
+    //       break;
+    //     default:
+    //       console.log("Entrada inválida");
+    //   }
+    // }
+
+    // var estacao = parseInt(prompt("Digite um mês (númerico)"));
+    // encontrarEstacao(estacao);
+
+    // function encontrarEstacaoDoAno(mes) {
+    //   // Verifique se o mês está dentro do intervalo válido (1 a 12)
+    //   if (mes < 1 || mes > 12) {
+    //     return "Mês inválido";
+    //   }
+
+    //   // Defina os intervalos de cada estação do ano
+    //   if (mes >= 1 && mes <= 3) {
+    //     return "Verão";
+    //   } else if (mes >= 4 && mes <= 6) {
+    //     return "Outono";
+    //   } else if (mes >= 7 && mes <= 9) {
+    //     return "Inverno";
+    //   } else {
+    //     return "Primavera";
+    //   }
+    // }
+
+    // Exercicio 3 - Conversao de temperatura
+    // const converterFahrenheitParaCelsius = (fahrenheit) =>
+    //   (fahrenheit - 32) / 1.8;
+
+    // console.log(converterFahrenheitParaCelsius(68));
+
+    // Exercicio 4 - É primo
+
+    // function isPrime(num) {
+    //   // Verifica se o número é menor que 2, pois números menores que 2 não são primos
+    //   // Verifica se o número é divisível por algum número além de 1 e ele mesmo
+    //   //Por exemplo, 5 é primo porque as únicas maneiras de escrevê-lo como um produto,
+    //   // 1 × 5 ou 5 × 1, envolvem o próprio 5
+
+    //   for (let i = 2; i < num; i++) {
+    //     if (num % i === 0) {
+    //       // 5 % 2.. 15 n é primo
+    //       return false;
+    //     }
+    //   }
+    //   return num > 1;
+    // }
+
+    // Exercicio 5 - Somatório
+
+    // function calcularSomatorio(numero) {
+    //   if (numero < 1) {
+    //     return "Número inválido";
+    //   }
+    //   let somatorio = 0;
+
+    //   for (let i = 0; i <= numero; i++) {
+    //     somatorio += i;
+    //   }
+    //   return somatorio;
+    // }
+    // console.log(calcularSomatorio(4)); // 4 + 3 + 2 + 1 = 10
+
+    // Exercicio 6 - Calcular cubo
+
+    // const cube = (num) => Math.pow(num, 3);
+    // const cube2 = (num) => num * num * num;
+
+    // Exercicio 7 - Verificar divisibilidade
+
+    // const verificaDivisibilidade = (numero1, numero2) =>
+    //   numero1 % numero2 === 0;
+    // function verificaDivisibilidade(numero1, numero2) {
+    //   if (numero1 % numero2 === 0) {
+    //     return true;
+    //   } else {
+    //     return false;
+    //   }
+    // }
+
+    // Exercicio 8 - Meses do ano
+    // function obterNomeDoMes(numero) {
+    //   switch (numero) {
+    //     case 1:
+    //       return "Janeiro";
+    //     case 2:
+    //       return "Fevereiro";
+    //     case 3:
+    //       return "Março";
+    //     case 4:
+    //       return "Abril";
+    //     case 5:
+    //       return "Maio";
+    //     case 6:
+    //       return "Junho";
+    //     case 7:
+    //       return "Julho";
+    //     case 8:
+    //       return "Agosto";
+    //     case 9:
+    //       return "Setembro";
+    //     case 10:
+    //       return "Outubro";
+    //     case 11:
+    //       return "Novembro";
+    //     case 12:
+    //       return "Dezembro";
+    //     default:
+    //       return "Valor de mês incorreto";
+    //   }
+    // }
+
+    // const elevado = (base, expoente) => Math.pow(base, expoente);
+
+    // console.log(elevado(2, 3));
+
+    // Estrutura do exercicio
+
+    function calcularIdade(anoNascimento, mesNascimento, diaNascimento) {
+      let idadeAnos = 2024 - anoNascimento;
+      let mesAtual = 5 - mesNascimento;
+      let diaAtual = 6 - diaNascimento;
+      //... Calcular a idade em anos, meses e dias.
+      // 4 / 06 / 1995
+      // idadeAnos = 29 // 28
+      // idadeMeses = -1 + 12 = // 11
+    }
+  </script>
+</hmtl>
