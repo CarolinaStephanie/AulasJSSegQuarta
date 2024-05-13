@@ -1,0 +1,136 @@
+<hmtl>
+  <script>
+    // let fruta = {
+    //   nome: "Banana",
+    //   cor: "Amarela",
+    //   peso: 300
+    // };
+    // console.log(fruta);
+    // // nome completo
+    // let pessoa = {
+    //   nome: "Carlos",
+    //   nomeCompleto: "Carlos Silva",
+    //   30: "idade",
+    // };
+
+    // console.log(pessoa.nomeCompleto);
+    // let fruta = {
+    //   nome: "Banana",
+    //   cor: "Amarela",
+    //   peso: 300,
+    // };
+    // console.log(fruta.cor);
+    // fruta.cor = "Laranja";
+    // fruta["cor"] = "Laranja";
+    // console.log(fruta.cor);
+
+    // EXEMPLO THIS
+    // var nome = "Lucas";
+    // function obterNome() {
+    //   var nome = "Jonas";
+    //   console.log(this.nome); // Lucas
+    // }
+
+    // obterNome(); // imprimir o nome dentro da funcao
+    // console.log(this.nome); // imprime o nome fora da funcao
+
+    // var nome = "Lucas";
+    // Em funcao construtora o this ele se refere ao proprio objeto ou ao objeto da instancia.
+    // function obterNome() {
+    //   this.nome = "Jonas";
+    //   console.log(this.nome); // Jonas
+    // }
+
+    // new obterNome(); // imprimir o nome dentro da funcao
+    // console.log(this.nome);
+
+    // function xicara(cor, forma, peso, capacidade) {
+    //   this.cor = cor;
+    //   this.forma = forma;
+    //   this.peso = peso;
+    //   this.capacidade = capacidade;
+    //   this.propriedades =
+    //     "Essa xicara é da cor " + this.cor + " e do peso " + this.peso;
+    // }
+
+    // const xicara1 = new xicara("branca", "redonda", 5, 200);
+    // const xicara2 = new xicara("branca", "redonda", 5, 200);
+    // const xicara3 = new xicara("branca", "redonda", 5, 200);
+    // const xicara4 = new xicara("branca", "redonda", 5, 200);
+    // console.log(xicara1);
+
+    // let texto = "Ola, Coder";
+
+    // console.log(texto.length);
+    // // Converter todo o texto para minusculo
+    // console.log(texto.toLowerCase());
+
+    // console.log(texto.toUpperCase());
+
+    // console.log("oi");
+
+    // let numeroPi = 3.14159948378362849;
+    // let numeroFormatado = numeroPi.toFixed(2);
+    // console.log(numeroFormatado);
+
+    // let pessoa = {
+    //   nome: "Carlos",
+    //   nomeCompleto: "Carlos Silva",
+    //   30: "idade",
+    // };
+
+    // let existePropriedade = "nomeCompleto" in pessoa;
+    // if (existePropriedade) {
+    //   console.log("Existe a propriedade");
+    // } else {
+    //   console.log("Nao existe a propriedade");
+    // }
+
+    // for (const propriedade in pessoa) {
+    //   console.log(propriedade + ": " + pessoa[propriedade]);
+    // }
+
+    // PascalCase
+
+    class Produto {
+      constructor(nome, preco) {
+        this.nome = nome.toUpperCase();
+        this.preco = parseFloat(preco);
+        this.vendido = false;
+      }
+      somaICMS() {
+        this.preco = this.preco * 1.21;
+      }
+      vender() {
+        this.vendido = true;
+      }
+    }
+    const produto1 = new Produto("arroz", "125");
+    const produto2 = new Produto("macarrão", "50");
+    produto1.somaICMS();
+    produto2.somaICMS();
+    produto1.vender();
+    console.log(produto1);
+    console.log(produto2);
+
+    function produto(nome, preco) {
+      this.nome = nome.toUpperCase();
+      this.preco = parseFloat(preco);
+      this.vendido = false;
+      this.somaICMS = function () {
+        this.preco = this.preco * 1.21;
+      };
+      this.vender = function () {
+        this.vendido = true;
+      };
+    }
+
+    const produto3 = new produto("arroz", "125");
+    const produto4 = new produto("macarrão", "50");
+    produto3.somaICMS();
+    produto4.somaICMS();
+    produto3.vender();
+    console.log(produto3);
+    console.log(produto4);
+  </script>
+</hmtl>
