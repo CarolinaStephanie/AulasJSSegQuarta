@@ -1,0 +1,203 @@
+<hmtl>
+  <script>
+    // const arrayA = [];
+    // const arrayB = [1, 2];
+    // const arrayC = [true, false, false, true];
+
+    // const arrayD = [1, false, "carol"];
+    // console.log(arrayD);
+
+    // ----------------------------------------------
+    //               0, 1, 2, 3, 4
+    // const numeros = [1, 2, 3, 4, 5];
+    // console.log(numeros[0]);
+    // console.log(numeros[2]);
+
+    // let resultado = numeros[0] + numeros[2];
+    // console.log(resultado);
+
+    // const nomes = ["carol", "joao", "pedro", "ana"];
+    // for (let index = 0; index < 4; index++) {
+    //   console.log(nomes[index]);
+    // }
+    // nomes[1] = "paulo"; // PODE SER FEITO
+    // //nomes = ["carol", "paulo", "pedro", "ana"]; // NÃO PODEMOS ATRIBUIR UM NOVO VALOR A VARIAVEL CONST
+    // console.log(nomes);
+
+    // SLIDE 14 - LENGTH
+
+    // const meuArray = ["rosa", "laranja", "verde"];
+    // console.log(meuArray.length);
+
+    // for (let index = 0; index < meuArray.length; index++) {
+    //   console.log(meuArray[index]);
+    // }
+
+    // SLIDE 15 - ADICIONAR NO ARRAY
+
+    // const meuArray = ["rosa", "laranja", "verde"];
+
+    // //adicionar nova cor no final do array
+
+    // meuArray.push("amarelo");
+
+    // //adicionar nova cor no comeco do array
+
+    // meuArray.unshift("vermelho");
+
+    // console.log(meuArray);
+
+    // meuArray[5] = "nova cor";
+
+    // console.log(meuArray);
+
+    // SLIDE 16
+
+    // const meuArray = ["rosa", "laranja", "verde", "amarelo"];
+    // console.log(meuArray);
+    // // remove o ultimo
+    // meuArray.pop();
+
+    // console.log(meuArray);
+    // // remove o primeiro elemento
+    // meuArray.shift();
+    // console.log(meuArray);
+    // SLIDE 17
+    // const meuArray = [
+    //   "rosa", // 0
+    //   "laranja", // 1
+    //   "verde", // 2
+    //   "amarelo", // 3
+    //   "marrom", // 4
+    //   "vermelho", // 5
+    // ];
+
+    // // remover verde e o amarelo
+    // meuArray.splice(2, 2);
+
+    // console.log(meuArray);
+
+    // SLIDE 18
+
+    // const meuArray = [
+    //   "rosa", // 0
+    //   "laranja", // 1
+    //   "verde", // 2
+    //   "amarelo", // 3
+    //   "marrom", // 4
+    //   "vermelho", // 5
+    // ];
+
+    // console.log(meuArray.join("\n"));
+
+    // const meuArray2 = ["cinza", "azul", "branco"];
+
+    // console.log(meuArray.concat(meuArray2)); //[todo o conteudo]
+    // // spread operator ou operador de propagacao (...)
+    // console.log([...meuArray, ...meuArray2]); // [todo o conteudo]
+
+    // SLIDE 20 - SLICE
+
+    const meuArray = [
+      "rosa", // 0
+      "laranja", // 1
+      "verde", // 2
+      "amarelo", // 3
+      "marrom", // 4
+      "vermelho", // 5,
+      "preto", // 6
+    ];
+
+    // iserir nova cor:
+    // verificar se a cor ja existe
+    // se a cor não existir, inserir na primeira posicao do array
+    // se não existir não precisa inserir.
+
+    // Guardar verde e amarelo em um outro array;
+    // let novoArray = meuArray.slice(2, 4);
+
+    // console.log(novoArray);
+
+    // console.log(meuArray.includes("rosa")); // true
+    // console.log(meuArray.includes("carolina")); // false
+
+    // console.log(meuArray.indexOf("rosa")); // 0
+    // console.log(meuArray.indexOf("amarelo")); // 3
+    // console.log(meuArray.indexOf("carolina")); // -1
+
+    // RESOLUCAO DO EXERCICIO:
+
+    // let arrayCores = [];
+
+    // for (let i = 0; i < 5; i++) {
+    //   let cor = prompt("Digite uma cor:");
+    //   arrayCores.push(cor);
+    // }
+
+    // console.log(arrayCores);
+    // console.log(arrayCores.length); // 5
+
+    // // remove um elemento
+    // let corEliminada = prompt("Digite uma cor para ser eliminada:");
+    // let indexCor = arrayCores.indexOf(corEliminada);
+    // if (indexCor != -1) {
+    //   // se a cor existir
+    //   arrayCores.splice(indexCor, 1);
+    // }
+    // console.log(arrayCores);
+
+    // for (let i = 0; i < arrayCores.length; i++) {
+    //   console.log("Na posicao " + i + " nos temos " + arrayCores[i]);
+    // }
+
+    // let corInserida = prompt("Digite uma cor para ser inserida:");
+    // indexCor = arrayCores.indexOf(corInserida);
+    // if (indexCor == -1) {
+    //   // Se a cor nao existir, adicionamos no comeco do array
+    //   arrayCores.unshift(corInserida);
+    // }
+
+    // console.log(arrayCores);
+
+    // SLIDE 29
+
+    // declarei um novo array
+    // const listaNomes = [];
+    // // quantidade de elementos a serem inseridos
+    // let quantidade = 5;
+
+    // //Uso de do...while para carregar nomes no array por prompt()
+    // do {
+    //   let entrada = prompt("Inserir nome");
+    //   listaNomes.push(entrada.toUpperCase()); // adiciona no fim do array // eva, EVA
+    //   console.log(listaNomes.length);
+    // } while (listaNomes.length != quantidade);
+
+    // //Concatenação com um novo array de dois elementos
+    // const novaLista = listaNomes.concat(["ANA", "EMA"]); //["todos os 5 nomes", "ANA", "EMA"]
+
+    // //Saída com salto de linha após cada item usando join
+    // console.log(novaLista.join("\n"));
+
+    // SLIDE 30
+    const nomes = ["Rita", "Pedro", "Miguel", "Ana", "Vanessa"];
+    console.log(nomes);
+
+    // Recebo como parâmetro o elemento a ser eliminado
+    const eliminar = (nome) => {
+      // Busco seu índice no array, se Pedro retorna index 1
+      let index = nomes.indexOf(nome); // 1
+
+      // Se ele existir, ou seja, for diferente de -1, será eliminado com splice
+      if (index != -1) {
+        nomes.splice(index, 1); // remover 1 elemento a partir da posicao 1(index)
+        console.log(nomes);
+      } else {
+        console.log("O nome " + nome + " não foi encontrado!");
+      }
+    };
+
+    let nomeEliminar = prompt("Qual nome deseja eliminar?");
+    eliminar(nomeEliminar);
+  </script>
+</hmtl>
