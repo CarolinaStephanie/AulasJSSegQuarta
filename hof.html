@@ -1,0 +1,182 @@
+<html>
+  <script>
+    // function soma(a, b) {
+    //   return a + b;
+    // }
+
+    // function realizarTransacao(valor1, valor2, operacao) {
+    //   return operacao(valor1, valor2); // return a + b
+    // }
+
+    // let restultado = realizarTransacao(10, 5, soma); // return a + b
+    // console.log(restultado);
+
+    // SLIDE 19 --  VOLTAR NESSE EXEMPLO
+
+    // function maiorQue(n) {
+    //   return (m) => m > n;
+    // }
+
+    // let maiorQueDez = maiorQue(10);
+
+    // // let maiorQueDez = (m) => m > 10
+
+    // console.log(maiorQueDez(12)); //  true
+    // console.log(maiorQueDez(8)); //  false
+
+    // SLIDE 20 -
+
+    // Terceira função
+
+    // function atribuirOperacao(op) {
+    //   // op = "somar"
+    //   // acesso ao a, b
+    //   if (op == "somar") {
+    //     return (a, b) => a + b;
+    //   } else if (op == "subtrair") {
+    //     return (a, b) => a - b;
+    //   }
+    // }
+
+    // let soma = atribuirOperacao("somar");
+    // let subtracao = atribuirOperacao("subtrair");
+
+    // console.log(soma(4, 6)); //  10
+    // console.log(subtracao(5, 3)); //  2
+    // SLIDE 22
+
+    // function porCadaUm(array, funcao) {
+    //   // array = [1, 2, 3, 4], funcao = console.log
+    //   for (const item of array) {
+    //     funcao(item);
+    //   }
+    // }
+    // const numeros = [1, 2, 3, 4];
+    // porCadaUm(numeros, console.log);
+
+    // porCadaUm(numeros, (item) => console.log(item));
+
+    // SLIDE 23
+    // const numeros = [1, 2, 3, 4];
+
+    // function porCadaUm(array, funcao) {
+    //   // array = [1, 2, 3, 4], funcao = console.log
+    //   for (const item of array) {
+    //     funcao(item);
+    //   }
+    // }
+    // let total = 0;
+
+    // function acumular(num) {
+    //   total += num;
+    // }
+
+    // porCadaUm(numeros, console.log); // METODO DO PROPRIO JS
+
+    // porCadaUm(numeros, acumular); // FUNCAO EXTERIOR
+
+    // porCadaUm(numeros, (num) => (total += num)); // FUNCAO DIRETAMENTE POR PARAMETRO
+    // console.log(total); // 10
+
+    // SLIDE 31
+    // const numeros = [1, 2, 3, 4, 5, 6];
+    // for (const num of numeros) {
+    //   console.log(num);
+    // }
+    // numeros.forEach((elemento, index) => {
+    //   console.log(elemento);
+    // });
+
+    // SLIDE 32
+
+    // const numeros = [1, 2, 3, 4, 5, 6];
+    // console.log(numeros.includes(3)); // true
+
+    // const cursos = [
+    //   { nome: "Javascript", preco: 15000 },
+    //   { nome: "ReactJS", preco: 22000 },
+    // ];
+
+    // const resultado = cursos.find((obj) => obj.preco === 22000);
+
+    // console.log(cursos.includes({ nome: "Javascript", preco: 15000 }));
+    // const obj1 = { nome: "Carol", id: 1 };
+    // const obj2 = { nome: "Carol", id: 1 };
+    // console.log(obj1 === obj2);
+
+    // const newArray = [obj1, obj2];
+    // console.log(newArray.includes(obj1)); // true
+    // console.log(newArray.includes({ nome: "Carol", id: 1 })); // false
+
+    // SLIDE 36
+
+    // const cursos = [
+    //   { nome: "Javascript", preco: 15000 },
+    //   { nome: "ReactJS", preco: 22000 },
+    //   { nome: "Python", preco: 20000 },
+    // ];
+
+    // // {......}
+
+    // const newCursos = cursos.map((curso) => ({
+    //   ...curso,
+    //   preco: curso.preco * 0.85,
+    // })); // array igual ao cursos com o preco modificado
+
+    // console.log(cursos.map((curso) => (curso.preco *= 0.85))); // [12.750, 18.700, 17.000]
+
+    // console.log(newCursos);
+
+    // SLIDE 47
+    // const produtos = [
+    //   { id: 1, nome: "Arroz", preco: 125 },
+    //   { id: 2, nome: "Macarrão", preco: 70 },
+    //   { id: 3, nome: "Pão", preco: 50 },
+    //   { id: 4, nome: "Pudim", preco: 100 },
+    // ];
+
+    // // achar o produto que possui o id 3 (FIND)
+    // console.log(produtos.find((produto) => produto.id === 3)); //{ id: 3, nome: "Pão", preco: 50 },
+
+    // // verificar se existe algum objeto com a propriedade nome "Farinha" (SOME)
+    // console.log(produtos.some((produto) => produto.nome === "Farinha")); // false
+
+    // // Imprimir todos os produtos com o preco abaixo de 100 reais (FILTER)
+    // console.log(produtos.filter((produto) => produto.preco < 100)); // Macarrao e pao
+
+    // // Criar um array com todos os nomes (MAP)
+    // console.log(produtos.map((produto) => produto.nome));
+
+    // EXEMPLO TRABALHO
+
+    class Pousada {
+      constructor(id, nome, dias, preco, desconto) {
+        this.id = id;
+        this.nome = nome;
+        this.dias = dias.join(", ");
+        this.preco = desconto(parseFloat(preco));
+      }
+    }
+
+    const pousada1 = new Pousada(
+      1,
+      "maravilhosa",
+      ["seg", "terca", "quarta"],
+      "15000",
+      (valor) => valor * 0.9
+    );
+
+    const pousada2 = new Pousada(
+      2,
+      "serra negra",
+      ["terca", "quarta"],
+      "10000",
+      (valor) => valor * 0.7
+    );
+
+    const pousadas = [pousada1, pousada2];
+    console.log(pousadas);
+    // filtrar por preco > 1500
+    // filtrar por dia aberto
+  </script>
+</html>

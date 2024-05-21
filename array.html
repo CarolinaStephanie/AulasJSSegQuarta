@@ -180,24 +180,80 @@
     // console.log(novaLista.join("\n"));
 
     // SLIDE 30
-    const nomes = ["Rita", "Pedro", "Miguel", "Ana", "Vanessa"];
-    console.log(nomes);
+    // const nomes = ["Rita", "Pedro", "Miguel", "Ana", "Vanessa"];
+    // console.log(nomes);
 
-    // Recebo como parâmetro o elemento a ser eliminado
-    const eliminar = (nome) => {
-      // Busco seu índice no array, se Pedro retorna index 1
-      let index = nomes.indexOf(nome); // 1
+    // // Recebo como parâmetro o elemento a ser eliminado
+    // const eliminar = (nome) => {
+    //   // Busco seu índice no array, se Pedro retorna index 1
+    //   let index = nomes.indexOf(nome); // 1
 
-      // Se ele existir, ou seja, for diferente de -1, será eliminado com splice
-      if (index != -1) {
-        nomes.splice(index, 1); // remover 1 elemento a partir da posicao 1(index)
-        console.log(nomes);
-      } else {
-        console.log("O nome " + nome + " não foi encontrado!");
+    //   // Se ele existir, ou seja, for diferente de -1, será eliminado com splice
+    //   if (index != -1) {
+    //     nomes.splice(index, 1); // remover 1 elemento a partir da posicao 1(index)
+    //     console.log(nomes);
+    //   } else {
+    //     console.log("O nome " + nome + " não foi encontrado!");
+    //   }
+    // };
+
+    // let nomeEliminar = prompt("Qual nome deseja eliminar?");
+    // eliminar(nomeEliminar);
+
+    // COLINHA :)
+
+    // const nomes = ["Rita", "Pedro", "Miguel", "Ana", "Vanessa"];
+
+    // console.log(nomes.length); // Imprime tamanho do Array
+    // nomes.push("Joao"); // adiciona no final
+    // nomes.unshift("Fernanda"); // adiciona no inicio
+    // nomes.pop(); // remove do final
+    // nomes.shift(); // remove do inicio
+    // nomes.splice(2, 1); // remove 1 elemento a partir do index 2
+    // nomes.join(","); // transforma array em uma string separando elementos com ,
+    // nomes.concat(nomes, ["Fabia"]); // Concatena dois array;
+    // nomes.slice(2, 4); // Corta o array e salva em outro;
+    // nomes.indexOf("Pedro"); // Obter o index (não possui retorna -1)
+    // nomes.includes("Pedro"); // Verifica se possui o elemento (true/false)
+    // nomes.reverse(); // inverte a ordem dos elementos
+
+    // SLIDE 36
+    // const produtos = [
+    //   { id: 1, nome: "Arroz" },
+    //   { id: 2, nome: "Macarrão" },
+    //   { id: 3, nome: "Pão" },
+    // ];
+
+    // for (let i = 0; i < produtos.length; i++) {
+    //   console.log(produtos[i].id, produtos[i].nome);
+    // }
+
+    // for (const produto of produtos) {
+    //   produto.id = 3;
+    //   console.log(produto.id, produto.nome);
+    // }
+
+    // SLIDE 37
+    class Produto {
+      constructor(nome, preco) {
+        this.nome = nome.toUpperCase(); // maiusculo
+        this.preco = parseFloat(preco); // 125.00
+        this.vendido = false;
       }
-    };
+      somaICMS() {
+        this.preco = this.preco * 1.21;
+      }
+    }
 
-    let nomeEliminar = prompt("Qual nome deseja eliminar?");
-    eliminar(nomeEliminar);
+    //Declaramos um array de produtos para armazenar objetos
+    const produtos = [];
+    produtos.push(new Produto("arroz", "125")); // [Produto("arroz", "125"), ]
+    produtos.push(new Produto("macarrão", "70")); // [Produto("arroz", "125"), Produto("macarrão", "70")]
+    produtos.push(new Produto("pão", "50"));
+
+    //Iteramos o array com for...of para modificar todos
+    for (const produto of produtos) produto.somaICMS();
+
+    console.log(produtos);
   </script>
 </hmtl>
