@@ -178,5 +178,60 @@
     console.log(pousadas);
     // filtrar por preco > 1500
     // filtrar por dia aberto
+
+    // SLIDE 39 -------
+
+    // METODO REDUCE -> obtemos um unico valor apos iterar sobre o array
+
+    // const arrayInteiros = [1, 2, 3, 4];
+    // array.reduce(funcao do que resumir, valor inicial do acumulador)
+    // funcaoResumir(acumulador, elemento)
+
+    // const soma = (acumulador, elemento) => acumulador + elemento;
+
+    // const subtracao = (acumulador, elemento) => acumulador - elemento;
+
+    // console.log(arrayInteiros.reduce(soma, 0));
+    // // acumulador inicial = 0
+    // // 1- soma(0, 1) nosso acumulador tem 1;
+    // // 2- soma(1, 2) 3
+    // // 3 - soma (3, 3) 6
+    // // 4 - soma (6, 4) 10
+
+    // const minhaCompra = [
+    //   { nome: "Dev Web", preco: 20000 },
+    //   { nome: "JavaScript", preco: 18750 },
+    //   { nome: "ReactJS", preco: 27500 },
+    // ];
+
+    // function somarPreco(acumulador, elemento) {
+    //   return acumulador + elemento.preco;
+    // }
+
+    // console.log(minhaCompra.reduce(somarPreco, 0));
+
+    // SLIDE 43 ------------
+
+    const numeros = [40, 1, 5, 200];
+
+    // sort - reordenacao do array
+    // array.sort(funcao de comparacao)
+    // funcaoComparacao(a, b) // fazendo comparacao por pares de elementos
+    // se a funcao retornar um numero positivo (posicao na frente)
+    // se o numero for negativo (posicao atras)
+
+    let crescente = numeros.sort((a, b) => a - b);
+    // 1 iteracao =  a:40, b: 1 = 39 resultado [1, 40, 5, 200];
+    // 2 iteracao = a: 40, b: 5 = 35 resultado [1, 5, 40, 200];
+    // 3 iteracao = a: 40, b: 200 = -160 resultado [1, 5, 40, 200];
+
+    let decrescente = numeros.sort((a, b) => b - a);
+    // [40, 1, 5, 200]
+    // 1 iteracao = a: 40, b: 1 = -39 resultado [40, 1, 5, 200]
+    // 2 iteracao = a: 1, b: 5 = 4 resultado [40, 5, 1, 200]
+    // 3 iteracao = a: 1, b: 200 = 199 resultado [40, 5, 200, 1]
+    // 4 iteracao = a: 40, b: 5 = -35 resultado [40, 5, 200, 1]
+    // 5 iteracao = a: 5, b: 200 = 195 resultado [40, 200, 5, 1]
+    //....
   </script>
 </html>
