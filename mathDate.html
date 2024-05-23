@@ -1,0 +1,88 @@
+<html>
+  <script>
+    // //console.log(Math.max(1, 3, 6, 4));
+    // console.log(Math.max("a", "b", "c")); // NaN
+    // // ceil -> arredonda pra cima
+    // console.log(Math.ceil(-1.2)); // -1  //  -2 (*) - 1  0  1  2
+    // console.log(Math.round(3.6)); // 3
+
+    // // METODO RANDOM - gera numero aleatorio entre 0-1
+
+    // console.log(Math.random() * 10);
+    // // gerando numero entre 20 - 50
+    // console.log(Math.random() * 30 + 20);
+
+    // DATE
+    // console.log(new Date());
+    // // ano, mes, dia, hora, minutos ....
+    // console.log(new Date(1995, 4, 15));
+
+    // SLIDE 29-----------
+    // // Varias formas de criar a mesma data
+    // console.log(new Date(2024, 11, 17)); // 17 dez 2024
+    // // String em formato ISO
+    // console.log(new Date("2024-12-17 00:00:00"));
+    // //Usando uma String com Data e Hora:
+    // console.log(new Date("December 17, 2024 00:00:00"));
+    // // Usando Array
+    // console.log(new Date([2024, 12, 17]));
+
+    // function descobrirSigno(dia, mes) {
+    //   switch (mes) {
+    //     case 1:
+    //       return dia < 21 ? "Capricórnio" : "Aquário";
+    //     case 2:
+    //       return dia < 20 ? "Aquário" : "Peixes";
+    //     case 3:
+    //       return dia < 21 ? "Peixes" : "Áries";
+    //     case 4:
+    //       return dia < 21 ? "Áries" : "Touro";
+    //     case 5:
+    //       return dia < 21 ? "Touro" : "Gêmeos";
+    //     case 6:
+    //       return dia < 21 ? "Gêmeos" : "Câncer";
+    //     case 7:
+    //       return dia < 23 ? "Câncer" : "Leão";
+    //     case 8:
+    //       return dia < 23 ? "Leão" : "Virgem";
+    //     case 9:
+    //       return dia < 23 ? "Virgem" : "Libra";
+    //     case 10:
+    //       return dia < 23 ? "Libra" : "Escorpião";
+    //     case 11:
+    //       return dia < 22 ? "Escorpião" : "Sagitário";
+    //     case 12:
+    //       return dia < 22 ? "Sagitário" : "Capricórnio";
+    //     default:
+    //       return "Signo não encontrado";
+    //   }
+    // }
+
+    // const nascimento = new Date(1995, 4, 15, 10, 0, 0);
+
+    // const dia = nascimento.getDate();
+    // const mes = nascimento.getMonth() + 1; // Mês começa de 0
+
+    // console.log(descobrirSigno(dia, mes));
+
+    // const diaHoje = new Date();
+    // const natal = new Date("December 25, 2024");
+    // console.log(diaHoje.toLocaleDateString());
+
+    // console.log(natal - diaHoje); // 1296000000
+
+    // const milissegundosPorDia = 86400000;
+
+    // console.log((natal - diaHoje) / milissegundosPorDia);
+
+    const inicio = new Date();
+
+    for (let i = 0; i < 1000; i++) {
+      console.log("contando tempo");
+    }
+
+    const final = new Date();
+
+    console.log("O processo demorou: " + (final - inicio) + " milissegundos");
+  </script>
+</html>
