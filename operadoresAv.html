@@ -1,0 +1,193 @@
+<html>
+  <script>
+    // SLIDE 12
+
+    // let num = 10;
+
+    // num = num + 1;
+    // num *= 1;
+    // num++;
+
+    // for (let i = 0; i < 10; i++) {
+    //   //
+    // }
+    // SLIDE 14
+
+    //     let temperatura = 31;
+
+    //     if (temperatura > 30) {
+    //       console.log("Dia quente!");
+    //     } else {
+    //       console.log("Dia agradável");
+    //     }
+    //     // operador ternario
+
+    //     // if codicao ? se for verdadeiro : se for falso
+
+    //     temperatura > 30
+    //       ? console.log("Dia quente!")
+    //       : console.log("Dia agradável");
+
+    //     console.log(temperatura > 30 ? "Dia quente!" : "Dia agradável");
+
+    //     let retorno = temperatura > 30 ? "Dia quente!" : "Dia agradável";
+    //     console.log(retorno);
+
+    // SLIDE 20
+
+    // const usuario = {
+    //   nome: "Maria",
+    //   idade: 20,
+    // };
+
+    // const registro = usuario.idade >= 18 && console.log("Adulto");
+
+    // console.log("OLA" || "OI");
+    // console.log(undefined || "oi");
+    // console.log(false || undefined);
+    // console.log("oi" || 0);
+    // console.log("" || "oi");
+    // // falsy = undefined, "", 0, false, nAn\
+
+    // //   SLIDE 30 - Nullish
+
+    // console.log(null ?? "oi"); // "oi";
+    // console.log(undefined ?? "oi"); // "oi";
+    // console.log(false ?? "oi"); // false
+    // console.log("" ?? "oi"); // ""
+    // console.log(0 ?? "oi"); // 0
+
+    // SLIDE 32
+
+    // const pessoa1 = {
+    //   nome: "Carolina",
+    //   idade: 10,
+    //   professora: {
+    //     cargo: "temporaria",
+    //   },
+    // };
+
+    // const pessoa2 = {
+    //   nome: "Joao",
+    //   idade: 15,
+    //   professora: null,
+    // };
+
+    // const pessoas = [pessoa1, pessoa2];
+
+    // pessoas.forEach((pessoa) => {
+    //   console.log(pessoa?.nome, pessoa?.idade, pessoa?.professora?.cargo);
+    // });
+
+    // console.log(pessoa1?.idade?.nome?.texto);
+
+    // SLIDE 37
+
+    //     const usuario = {
+    //       nome: "Maria",
+    //       idade: 16,
+    //       endereco: {
+    //         rua: "1",
+    //         numero: {
+    //           valor: 123,
+    //           complemento: "casa",
+    //         },
+    //         cidade: "Beloryhills",
+    //       },
+    //     };
+
+    //     // const { nome, idade, altura } = usuario; // extrai nome e idade de usuario e
+    //     // // transformei em constante
+
+    //     // console.log(nome, idade, altura);
+
+    //     // Quero extrair (criar uma variavel) nome, cidade
+    //     // 1 chamada
+    //     // lado esquerdo   =   lado direito
+    //     // propriedades    =   objeto
+    //     // 2 chamada, 3, 4, 5
+    //     // lado esquerdo    :   lado direito
+    //     // objeto           :   { propriedade }
+
+    //     // 1 chamada
+
+    //     const {
+    //       nome,
+    //       idade,
+    //       endereco: {
+    //         numero: { complemento },
+    //       },
+    //     } = usuario;
+    //     console.log(nome, idade, complemento);
+    //
+    // SLIDE 45-----------------
+    // const item = {
+    //   item_id: 432,
+    //   product_name: "Some product",
+    //   price_per_unit: 5600,
+    // };
+    // // alias
+    // // lado esquerdo                lado direito
+    // // propriedade do obj.          novo nome da variável
+    // const { item_id: id, product_name: nome, price_per_unit: preco } = item;
+
+    // console.log(id); // 432
+    // console.log(nome); // "Some product"
+    // console.log(preco); // 5600
+    // console.log(item);
+
+    // SLIDE 47
+    // const produto = {
+    //   id: 10,
+    //   nome: "Curso Javascript",
+    //   preco: 12500,
+    // };
+
+    // function desestruturar({ id, nome }) {
+    //   console.log(id, nome);
+    // }
+
+    // desestruturar(produto); // 10 Curso Javascript
+
+    // SLIDE 50
+
+    // const nomes = ["Juan", "Leonardo", "Carolina", "Icaro"];
+
+    // const [nome1, , nome3] = nomes;
+    // console.log(nome1, nome3);
+
+    // // SLIDE 55
+    // const numeros = [10, 11, 5, 20];
+    // console.log(...numeros);
+    // console.log(Math.min(...numeros));
+
+    // // SLIDE 58
+    // const nomes1 = ["Carol", "Icaro"];
+    // const nomes2 = ["Pablo", "Ane"];
+    // console.log([...nomes1, ...nomes2]);
+
+    // // SLIDE 60
+
+    // const obj1 = {
+    //   casa: "azul",
+    //   tamanho: 50,
+    // };
+    // const obj2 = {
+    //   ...obj1,
+    //   armario: "vermelho",
+    //   altura: 10,
+    // };
+
+    // function imprimirObjeto({ ...props }) {
+    //   console.log(props.casa);
+    // }
+
+    // imprimirObjeto(obj2);
+
+    function somar(...props) {
+      console.log(props);
+    }
+
+    somar(10, 15, 20);
+  </script>
+</html>
