@@ -184,9 +184,20 @@
 
     // imprimirObjeto(obj2);
 
-    function somar(...props) {
-      console.log(props);
+    // REST --------------------------
+
+    // function somar(num1, num2, num3) {
+    //   console.log(num1, num2, num3);
+    // }
+
+    // function somar(...props) {
+    //   console.log(props);
+    // }
+
+    function somar(...numeros) {
+      return numeros.reduce((acc, n) => acc + n, 0);
     }
+    // tudo o que passamos é um array de paramentros
 
     somar(10, 15, 20);
   </script>

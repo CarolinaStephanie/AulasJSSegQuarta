@@ -1,0 +1,44 @@
+<html>
+  <script>
+    //Exercício 1: Criando uma classe para representar um Círculo
+    class Circle {
+      constructor(radius) {
+        this.radius = radius;
+      }
+
+      // Método para calcular a área do círculo
+      calculateArea() {
+        return Math.PI * this.radius ** 2;
+      }
+
+      // Método para calcular o perímetro do círculo
+      calculatePerimeter() {
+        return 2 * Math.PI * this.radius;
+      }
+    }
+
+    // Exemplo de uso da classe Circle
+    const circle1 = new Circle(5);
+    console.log("Área do círculo:", circle1.calculateArea()); // Saída: 78.53981633974483
+    console.log("Perímetro do círculo:", circle1.calculatePerimeter()); // Saída: 31.41592653589793
+
+    //Exercício 2: Criando uma função construtora para representar um Livro
+
+    function Livro(titulo, autor, ano) {
+      this.titulo = titulo;
+      this.autor = autor;
+      this.ano = ano;
+      this.getSummary = function () {
+        return `${this.titulo} foi escrito por ${this.autor} em ${this.ano}`;
+      };
+    }
+
+    // Instanciando objetos da classe Livro
+    const livro1 = new Livro("Crepusculo", "Margot", 2010);
+    const livro2 = new Livro("Ra tim bum", "Margot", 1990);
+
+    // Usando o método getSummary
+    console.log(livro1.getSummary());
+    console.log(livro2.getSummary());
+  </script>
+</html>
