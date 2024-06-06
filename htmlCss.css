@@ -3,6 +3,9 @@
     font-size: x-large;
     font-weight: bold;
 }
+.row{
+    color: red;  
+}
 
 #secao1{
     color: blue;
