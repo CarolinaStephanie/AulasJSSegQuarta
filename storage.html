@@ -1,0 +1,80 @@
+<html>
+  <script>
+    // -------- EXEMPLO LOCAL STORAGE
+
+    // localStorage.setItem("nome", "Carolina");
+    // localStorage.setItem("professora", true);
+    // localStorage.setItem("idade", 29);
+
+    // console.log(localStorage.getItem("nome"));
+    // console.log(localStorage.getItem("professora"));
+    // console.log(localStorage.getItem("idade"));
+
+    // -------- EXEMPLO SESSION STORAGE
+
+    // sessionStorage.setItem("selecionados", [1, 2, 3]);
+    // sessionStorage.setItem("valido", false);
+    // sessionStorage.setItem("email", "carolinajeronimo@gmail.com");
+
+    // console.log(sessionStorage.getItem("valido") == "true");
+    // console.log(sessionStorage.getItem("selecionados").split(","));
+
+    // // ------------------------------------
+
+    // for (let i = 0; i < localStorage.length; i++) {
+    //   let chave = localStorage.key(i);
+    //   console.log(chave, localStorage.getItem(chave));
+    // }
+
+    // localStorage.clear();
+    // sessionStorage.removeItem("email");
+
+    // JSON ------------------------------------
+
+    const fruta = {
+      id: 1,
+      nome: "Banana",
+    };
+    // const frutaString = JSON.stringify(fruta);
+    // console.log(frutaString);
+    // localStorage.setItem("fruta", frutaString);
+
+    // console.log(JSON.parse(localStorage.getItem("fruta")));
+
+    // const produtos = [
+    //   { id: 1, produto: "Arroz", preco: 125 },
+    //   { id: 2, produto: "Macarrão", preco: 70 },
+    //   { id: 3, produto: "Pão", preco: 50 },
+    //   { id: 4, produto: "Pudim", preco: 100 },
+    // ];
+
+    // const armazenarLocal = (chave, valor) => {
+    //   localStorage.setItem(chave, valor);
+    // };
+
+    // //Armazenar produto por produto
+    // for (const produto of produtos) {
+    //   armazenarLocal(produto.id, JSON.stringify(produto));
+    // }
+    // // ou armazenar array completo
+    // armazenarLocal("listaProdutos", JSON.stringify(produtos));
+
+    class Produto {
+      constructor(obj) {
+        this.nome = obj.produto.toUpperCase();
+        this.preco = parseFloat(obj.preco);
+      }
+      somaICMS() {
+        this.preco = this.preco * 1.21;
+      }
+    }
+    const produtos = [];
+    const arrayLido = JSON.parse(localStorage.getItem("listaProdutos"));
+
+    for (const produto of arrayLido) {
+      produtos.push(new Produto(produto));
+    }
+    produtos[0].somaICMS();
+    console.log(produtos);
+  </script>
+</html>

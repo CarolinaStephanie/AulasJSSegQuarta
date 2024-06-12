@@ -99,3 +99,18 @@ function functionMetodo3() {
 //   tarefas = [];
 //   acaoVisualizar();
 // }
+
+let meuFormulario = document.getElementById("formulario");
+meuFormulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e) {
+  //Cancelamos o comportamento do evento
+  e.preventDefault();
+  //Obtemos o elemento a partir de onde o evento foi disparado
+  let formulario = e.target;
+
+  //Obtemos o valor do primeiro filho <input type="text">
+  console.log(formulario.children[0].value);
+  //Obtemos o valor do segundo filho <input type="number">
+  console.log(formulario.children[1].value);
+}
