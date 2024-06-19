@@ -1,0 +1,91 @@
+<html>
+  <script>
+    // console.log("Ola");
+    // console.log("Mundo");
+
+    console.log("1 - Início do processo");
+
+    setTimeout(() => {
+      console.log("2 - Meio do processo");
+    }, 2000);
+
+    console.log("3 - Fim do processo");
+
+    // for (let letra of "olá") {
+    //   setTimeout(() => {
+    //     console.log(letra);
+    //   }, 1000);
+    // }
+
+    // for (let letra of "mundo") {
+    //   setTimeout(() => {
+    //     console.log(letra);
+    //   }, 3000);
+    // }
+
+    // function multiply(x, y) {
+    //   return x * y;
+    // }
+
+    // function printSquare(x) {
+    //   let s = multiply(x, x);
+    //   console.log(s);
+    // }
+
+    // printSquare(5);
+
+    // const eventoFuturo = (resposta) => {
+    //   return new Promise((resolve, reject) => {
+    //     if (resposta) {
+    //       resolve("Promessa resolvida");
+    //     } else {
+    //       reject("Promessa Rejeitada");
+    //     }
+    //   });
+    // };
+    // console.log(eventoFuturo(true));
+
+    // const eventoFuturo = (res) => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       res ? resolve("Promessa resolvida") : reject("Promessa rejeitada");
+    //     }, 2000);
+    //   });
+    // };
+
+    // eventoFuturo(true)
+    //   .then((resp) => {
+    //     console.log(resp);
+    //   })
+    //   .catch((resp) => {
+    //     console.log(resp);
+    //   })
+    //   .finally(() => {
+    //     console.log("acabou");
+    //   });
+
+    const BD = [
+      { id: 1, nome: "Produto 1", preco: 1500 },
+      { id: 2, nome: "Produto 2", preco: 2500 },
+      { id: 3, nome: "Produto 3", preco: 3500 },
+    ];
+
+    const pedirProdutos = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(BD);
+        }, 4000);
+      });
+    };
+
+    let produtos = [];
+
+    const renderProdutos = (array) => console.log(array);
+    let loading = true;
+    pedirProdutos().then((resp) => {
+      produtos = resp;
+      loading = false;
+      renderProdutos(produtos);
+    });
+  </script>
+</html>
