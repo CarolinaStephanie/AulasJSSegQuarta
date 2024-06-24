@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+  </head>
+  <body>
+    <h2>LIBS</h2>
+    <button id="botao">Clique Aqui</button>
+    <div id="container">
+      <p class="texto"></p>
+    </div>
+    <script>
+      //   const now = moment();
+      //   console.log("Data e hora atual:", now.format("YYYY-MM-DD HH:mm:ss"));
+
+      const btn = document.getElementById("botao");
+      //   btn.addEventListener("click", () => {
+      //     swal({
+      //       title: "Tem certeza de que quer excluir?",
+      //       icon: "warning",
+      //       buttons: {
+      //         cancel: "Não",
+      //         confirm: "Sim",
+      //       },
+      //     }).then((result) => {
+      //       console.log(result); // true or null
+      //       if (result) {
+      //         swal({
+      //           title: "Excluído!",
+      //           icon: "success",
+      //           text: "O arquivo foi excluído!",
+      //         });
+      //       } else {
+      //         swal({
+      //           title: "Erro!",
+      //           icon: "error",
+      //           text: "O arquivo não foi excluído!",
+      //         });
+      //       }
+      //     });
+      //   });
+
+      //   btn.addEventListener("click", () => {
+      //     Toastify({
+      //       text: "Testando o toast - JS!",
+      //       duration: 3000,
+      //     }).showToast();
+      //   });
+
+      //   const DateTime = luxon.DateTime;
+      //   const dt = DateTime.fromISO("1995-05-15");
+      //   console.log(dt.toLocaleString(DateTime.DATE_HUGE));
+
+      const DateTime = luxon.DateTime;
+      const Duration = luxon.Duration;
+      const Interval = luxon.Interval;
+
+      const dt = DateTime.fromISO("2025-05-25");
+
+      const later = DateTime.local(2025, 5, 26);
+      const i = Interval.fromDateTimes(dt, later);
+      console.log(i);
+      console.log(i.length("days")); // 1
+      console.log(i.length("hours")); // 24
+      console.log(i.length("minutes")); // 1440
+
+      container = document.getElementById("container");
+      container.innerHTML = `<h2> ${DateTime.fromISO(
+        "2025-05-25"
+      ).toLocaleString(DateTime.DATE_HUGE)}</h2>`; // alterando o html
+    </script>
+  </body>
+</html>

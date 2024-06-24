@@ -26,9 +26,9 @@ let titulo = document.getElementById("titulo");
 console.log(titulo.innerText);
 titulo.innerText = "Olá Coder!";
 console.log(titulo.innerText); // alterando o texto
-
+const DateTime = luxon.DateTime;
 container = document.getElementById("container");
-container.innerHTML = "<h2> ESSE É UMA MODIFICACAO</h2>"; // alterando o html
+container.innerHTML = `<h2> ${DateTime.fromISO("2025-05-25")}</h2>`; // alterando o html
 
 let nome = document.getElementById("nome");
 let idade = document.getElementById("idade");
